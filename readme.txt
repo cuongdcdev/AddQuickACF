@@ -13,7 +13,7 @@ Donate link: https://www.paypal.me/cuongdc
 
    This dead simple plugin makes AddQuickTags supports working with ACF Option page.
 
-   It's add all custom Quick Tags in Text mode  of ACF's WYSISYG Editor.
+   It's add all your custom Quick Tags in the Text mode of ACF's WYSISYG Editor.
 
 
 == Installation ==
