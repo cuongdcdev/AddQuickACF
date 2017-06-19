@@ -18,7 +18,7 @@ Donate link: https://www.paypal.me/cuongdc
 
 == Installation ==
 
-Unzip this folder and upload it to your WordPress plugin directory, active it and you are done
+Unzip *addQuickACF.zip* and  upload it to your WordPress plugin directory, active it and you are done
 
 == Changelog ==
 
