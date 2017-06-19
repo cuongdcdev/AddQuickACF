@@ -1,4 +1,4 @@
-=== Plugin Name ===
+=== AddQuickACF  ===
 Contributors: CuongDC
 Tags: AddQuickTag, ACF Pro 
 Requires at least: 3.0 
