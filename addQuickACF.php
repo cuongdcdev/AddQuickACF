@@ -2,7 +2,7 @@
 /*
   Plugin Name: Make AddQuickTags supports ACF Option page !
   Plugin URI:
-  Description: This dead simple plugin makes AddQuickTags supports working with ACF Option page, It's add all custom Quick Tags in Text mod  of ACF's WYSISYG Editor
+  Description: This dead simple plugin makes AddQuickTags supports working with ACF Option page, It's add all custom Quick Tags in Text mode  of ACF's WYSISYG Editor
   Version: 1.0.0
   Author: CuongDC
   Author URI: cuongdcdev@gmail.com
@@ -13,7 +13,7 @@
 function c_is_admin_page(){
     // check if is Admin page
     global $pagenow;
-    return ($pagenow == "admin.php" ) ? true : false; 
+    return ($pagenow == "admin.php" && is_admin() ) ? true : false; 
 }
 
 
@@ -58,7 +58,8 @@ function c_addQuickTags_supports_ACF() {
                 var c_addquicktag_tags = <?php echo json_encode($options); ?>,
                     c_addquicktag_post_type = <?php echo json_encode($current_screen->id); ?>;
 
-                console.log(c_addquicktag_tags["buttons"].length);
+                //console.log(c_addquicktag_tags["buttons"].length);
+                if( !c_addquicktag_tags["buttons"] ) return;
                 for( var i = 0 ; i < c_addquicktag_tags["buttons"].length ; i++  ){
                 var button = c_addquicktag_tags["buttons"][i];    
                 QTags.addButton( 
