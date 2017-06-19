@@ -10,17 +10,15 @@
  */
 
 
-function c_is_acf_options_page(){
-    // check if is ACF Option page
+function c_is_admin_page(){
+    // check if is Admin page
     global $pagenow;
-    global $current_screen;
-    $rs = (preg_match("/.+acf-options.+/" ,$current_screen->id));
-    return ($rs > 0 && $pagenow == "admin.php" ) ? true : false; 
+    return ($pagenow == "admin.php" ) ? true : false; 
 }
 
 
 function c_addQuickTags_supports_ACF() {
-    if( !c_is_acf_options_page() ) return; //if not ACF option page, simply do nothing 
+    if( !c_is_admin_page() ) return; //if not ACF option page, simply do nothing 
     
     
     global $current_screen;
